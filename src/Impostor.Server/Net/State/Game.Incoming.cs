@@ -29,7 +29,7 @@ namespace Impostor.Server.Net.State
             // Check if;
             // - The player is already in this game.
             // - The game is full. 
-            if (player?.Game != this && _players.Count >= x.Value.Options.MaxPlayers) // x.Value.Options.MaxPlayers
+            if (player?.Game != this && _players.Count >= Options.MaxPlayers) // dont use x. use options
             {
                 return GameJoinResult.FromError(GameJoinError.GameFull);
             }
