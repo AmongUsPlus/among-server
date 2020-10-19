@@ -8,7 +8,7 @@ namespace Impostor.Shared.Innersloth
     {
         
         public byte Version { get; set; }
-        public byte MaxPlayers = (int)100;
+        public byte MaxPlayers = (byte)100;
         public GameKeywords Keywords { get; set; }
         public byte MapId { get; set; }
         public float PlayerSpeedMod { get; set; }
