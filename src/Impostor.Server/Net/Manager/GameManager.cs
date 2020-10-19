@@ -74,7 +74,7 @@ namespace Impostor.Server.Net.Manager
             foreach (var (_, game) in _games.Where(x =>
                 x.Value.IsPublic &&
                 x.Value.GameState == GameStates.NotStarted &&
-                x.Value.PlayerCount < 100)) // x.Value.Options.MaxPlayers
+                x.Value.PlayerCount < x.Value.Options.MaxPlayers)) // x.Value.Options.MaxPlayers
                 {
                 // Check for options.
                 if (!map.HasFlag((MapFlags)(1 << game.Options.MapId)))
